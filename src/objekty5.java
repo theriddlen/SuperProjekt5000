@@ -47,7 +47,9 @@ if(reszta!=0){
 				      System.out.print("-");
 				      licznik3++;
 				}while (licznik3!=mianownik_dlugosc);
-			      System.out.println("");
+			      System.out.print(" = "+wynik);
+
+			      System.out.println();
 				}
 				
 
@@ -60,9 +62,10 @@ if(reszta!=0){
 				      System.out.print("-");
 					}
 				      licznik3++;
-					
 				}while (licznik3!=mianownik_dlugosc);
-			      System.out.println("");
+			      System.out.print(" = "+wynik);
+
+			      System.out.println();
 				}
 				
 				if(reszta!=0){
