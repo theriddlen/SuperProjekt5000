@@ -4,74 +4,58 @@ public class objekty4 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		class Filizanka{
-			private int komplet;
-			private double pojemnosc, cena;
-			private String kolor;
+		class Pencil{
+			private int twardosc, twar_wyswietlana;
 
-			public void setKolor (String s){
-				kolor=s;
+
+			public void ustawTwardosc (int t){
+				twardosc=t;
+				if(twardosc<0)
+					twar_wyswietlana=-1*twardosc;
+				else
+					twar_wyswietlana=twardosc;
 			}
-			public void setPojemnosc (double p){
-				pojemnosc=p;
+		
+			
+		public void wyswietl (){
+			if (twardosc>1){
+			System.out.println(" ołowek "+twar_wyswietlana+"B");
 			}
-			public void setCenaSztuki (double c){
-				cena=c;
+			if (twardosc==1){
+			System.out.println(" ołowek B");
 			}
-			public void setKomplet (int k){
-				komplet=k;
-				cena=komplet*cena;
+			if (twardosc==0){
+			System.out.println(" ołowek HB");
 			}
-	
-			public void wyswietl (){
-				System.out.println("  kolor filiżanki: "+kolor);
-				System.out.println("  pojemnosc filiżanki: "+pojemnosc+"l");
-				if(komplet>0){
-					System.out.print("  komplet: "+komplet+" sztuk");
-					if(komplet==2){
-						System.out.print("i");
-					}
-					System.out.println();
-					System.out.println("  cena kompletu: "+cena+" zł");
-
-				}
-				else{
-					System.out.println("  cena: "+cena+" zł");
-				}
-				System.out.println();
-
-
-				}
+			if (twardosc<-1){
+			System.out.println(" ołowek "+twar_wyswietlana+"H");
 			}
-		  Filizanka f1=new Filizanka();
-		  f1.setKolor("szary");
-		  f1.setPojemnosc(0.5);
-		  f1.setCenaSztuki(12.5);
-		  f1.setKomplet(10);
+			if (twardosc==-1){
+			System.out.println(" ołowek H");
+			}
+			
+			}
+		}
+		
+		 Pencil p1= new Pencil();
 
-		  Filizanka f2=new Filizanka();
-		  f2.setKolor("żółty");
-		  f2.setPojemnosc(0.7);
-		  f2.setCenaSztuki(20);
-		  f2.setKomplet(1);
+		 p1.ustawTwardosc(-4);
+		 p1.wyswietl();
 
-		  Filizanka f3=new Filizanka();
-		  f3.setKolor("wyprzedaż");
-		  f3.setPojemnosc(0.33);
-		  f3.setCenaSztuki(1);
-		  f3.setKomplet(2);
+		 p1.ustawTwardosc(0);
+		 p1.wyswietl();
 
-		  f1.wyswietl();
+		 p1.ustawTwardosc(3);
+		 p1.wyswietl();
 
+		 p1.ustawTwardosc(-2);  
+		 p1.wyswietl();
 
+		 p1.ustawTwardosc(1);
+		 p1.wyswietl();
 
-
-
-		  f2.wyswietl();
-
-
-
-		  f3.wyswietl();
+		 p1.ustawTwardosc(-1);
+		 p1.wyswietl();
 		
 	}
 
