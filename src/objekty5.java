@@ -24,7 +24,7 @@ public class objekty5 {
 				przod_dlugosc=przod_zamiana.length();
 				wynik=1.0*licznik/mianownik;
 				
-if(reszta!=0){
+				if(reszta!=0){
 				System.out.print("    ");
 				int licznik = 0;
 					do{
