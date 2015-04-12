@@ -4,8 +4,7 @@ public class objekty1 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner is=new Scanner(System.in);
-		double suma;
-	
+
 		
 		class Zeszyt{
 			private int liczbakartek;
