@@ -18,7 +18,7 @@ public class objekty4 {
 			int twar_wyswietlana;
 			
 			if(twardosc<0)
-				twar_wyswietlana=-1*twardosc;
+				twar_wyswietlana=-twardosc;
 			else
 				twar_wyswietlana=twardosc;
 			
