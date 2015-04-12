@@ -5,8 +5,8 @@ public class objekty5 {
 		// TODO Auto-generated method stub
 		
 		class Ulamek{
-			private int licznik, mianownik, przod, reszta, przod_dlugosc, mianownik_dlugosc;
-			private String przod_zamiana, mianownik_string;
+			private int licznik, mianownik, przod, reszta, przod_dlugosc, mianownik_dlugosc, licznik_dlugosc;
+			private String przod_zamiana, mianownik_string, licznik_string;
 			private Double wynik;
 
 
@@ -16,8 +16,13 @@ public class objekty5 {
 			public void ustawMianownik (int m){
 				mianownik=m;
 			}
+			public void ustawUlamek (int u1, int u2){
+				licznik=u1;
+				mianownik=u2;
+			}
 			
 			public void wyswietl (){
+				if (mianownik!=0 && licznik !=0){
 				przod=licznik/mianownik;
 				reszta=licznik-(przod*mianownik);
 				przod_zamiana=""+przod;
@@ -79,8 +84,49 @@ public class objekty5 {
 					
 				}while (licznik2!=przod_dlugosc);
 				System.out.println(mianownik);
+			    System.out.println();
+
 				}
 			}
+				else{
+					//jezeli blad 
+					mianownik_string=""+mianownik;
+					mianownik_dlugosc=mianownik_string.length();
+					licznik_string=""+licznik;
+					licznik_dlugosc=licznik_string.length();
+					if(licznik_dlugosc>mianownik_dlugosc){
+						mianownik_dlugosc=licznik_dlugosc;
+					}
+					//gora
+					System.out.print("     ");
+					//if(licznik==0){
+					//System.out.print(" ");
+					//}
+
+					System.out.println(licznik);
+					
+					//srodek
+					System.out.print("  "+" "+"  ");
+					
+					int licznik3 = 0;
+					do{
+					      System.out.print("-");
+					      licznik3++;
+					}while (licznik3!=mianownik_dlugosc);
+				      System.out.print(" = "+"ERR");
+
+				      System.out.println();
+					
+				    //dol
+						System.out.print("    ");
+					    System.out.print(" ");
+						System.out.println(mianownik);
+					    System.out.println();
+
+					
+				}
+		}
+			
 		}
 		
 		   Ulamek u1=new Ulamek();
@@ -105,7 +151,7 @@ public class objekty5 {
 
 
 
-		  // u2.ustawUlamek(100,0);
+		   u2.ustawUlamek(100,0);
 
 
 		   u2.wyswietl();
