@@ -11,23 +11,38 @@ public class L3_Z2 {
 			private double pojemnosc, cena; 
 
 
-			public Adres (String kolor, double cena, double pojemnosc, 
+			public Filizanka (String kolor, double cena, double pojemnosc, 
 					      int sztuki){
-				this.nazwisko=nazwisko;
-				this.imie=imie;
-				this.kod=kod;
-				this.miasto=miasto;
-				this.ulica=ulica;
-				this.nr_dom=nr_dom;
-				this.nr_miesz=nr_miesz;
+				this.kolor=kolor;
+				this.cena=cena;
+				this.pojemnosc=pojemnosc;
+				this.sztuki=sztuki;
 			}
+
+			public Filizanka (String kolor, double cena){
+			this(kolor,cena,0.33,6);
+		}
+			public Filizanka (double cena){
+			this("bialy",cena,0.33,1);
+		}
 			public String toString (){
+				cena=cena*sztuki;
 				String wynik="";
-				wynik+="---------------------------------"+"\n";
-				wynik+=imie.charAt(0)+". "+nazwisko+"\n";
-				wynik+="ul. "+ulica+" "+nr_dom+" m. "+nr_miesz+"\n";
-				wynik+=kod+" "+miasto+"\n";
-				wynik+="---------------------------------"+"\n";
+				wynik+="  kolor filiżanki: "+kolor+"\n";
+				wynik+="  pojemnosc filiżanki: "+pojemnosc+"l"+"\n";
+				if(sztuki>1 && sztuki<5){
+					wynik+="  komplet: "+sztuki+" sztuki"+"\n";
+				}
+				if(sztuki>=5){
+					wynik+="  komplet: "+sztuki+" sztuk"+"\n";
+				}
+				if(sztuki==1){
+					wynik+="  cena: "+cena+" zł"+"\n";
+				}
+				else{
+					wynik+="  cena kompletu: "+cena+" zł"+"\n";
+				}
+				wynik+="\n";
 
 				return wynik;
 			}
