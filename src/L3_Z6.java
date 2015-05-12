@@ -3,7 +3,6 @@ public class L3_Z6 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner is=new Scanner(System.in);
 	
 		class FunnyString{
 			private boolean ascii;
@@ -39,10 +38,10 @@ public class L3_Z6 {
 				int licznik = 0;
 				String wynik="";
 				do{
-					if(ascii=false){
+					if(ascii==false){
 					wynik+=slowo.charAt(licznik);
 					}
-					if(ascii=true){
+					if(ascii==true){
 						wynik+=(int)slowo.charAt(licznik);
 					}
 					if(licznik!=dlugosc-1)
