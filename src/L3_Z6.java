@@ -34,6 +34,14 @@ public class L3_Z6 {
 			
 			public String toString (){
 				
+				String statusprzesylki="niewyslana";
+				
+				 statusprzesylki="wyslana";
+
+					
+				 if(statusprzesylki.equals("wyslana"));
+				
+				
 				int dlugosc = slowo.length();
 				int licznik = 0;
 				String wynik="";
