@@ -5,10 +5,7 @@ public class objekty5 {
 		// TODO Auto-generated method stub
 		
 		class Ulamek{
-			private int licznik, mianownik, przod, reszta, przod_dlugosc, mianownik_dlugosc, licznik_dlugosc;
-			private String przod_zamiana, mianownik_string, licznik_string;
-			private Double wynik;
-
+			private int licznik, mianownik;
 
 			public void ustawLicznik (int l){
 				licznik=l;
@@ -22,6 +19,11 @@ public class objekty5 {
 			}
 			
 			public void wyswietl (){
+				
+				int przod, reszta, przod_dlugosc, mianownik_dlugosc, licznik_dlugosc;
+				String przod_zamiana, mianownik_string, licznik_string;
+				double wynik;
+				
 				if (mianownik!=0 && licznik !=0){
 				przod=licznik/mianownik;
 				reszta=licznik-(przod*mianownik);

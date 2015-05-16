@@ -5,19 +5,23 @@ public class objekty4 {
 		// TODO Auto-generated method stub
 		
 		class Pencil{
-			private int twardosc, twar_wyswietlana;
+			private int twardosc;
 
-
+//usunac twar_wyswietl
 			public void ustawTwardosc (int t){
 				twardosc=t;
-				if(twardosc<0)
-					twar_wyswietlana=-1*twardosc;
-				else
-					twar_wyswietlana=twardosc;
+
 			}
 		
 			
 		public void wyswietl (){
+			int twar_wyswietlana;
+			
+			if(twardosc<0)
+				twar_wyswietlana=-twardosc;
+			else
+				twar_wyswietlana=twardosc;
+			
 			if (twardosc>1){
 			System.out.println(" ołowek "+twar_wyswietlana+"B");
 			}
