@@ -7,48 +7,77 @@ public class L4_Z3 {
 		class Kurier{
 		private String surname,name,zipcode,city,street;
 		private int no,flat;
+		private boolean status;
+
 		public static final int SURNAME=1;
 		public static final int NAME=2;
 		public static final int ZIP_CODE=3;
-		public static final int CITY=3;
-		public static final int STREET=3;
-		public static final int NO=3;
-		public static final int FLAT=3;
+		public static final int CITY=4;
+		public static final int STREET=5;
+		public static final int NO=6;
+		public static final int FLAT=7;
 
 		
-		public Kurier (String surname,String name,String zipcode,String city,String street){
-			this(szerokosc,wysokosc,Rectangle.WYMIARY);
+		public Kurier (){
+			this("default","default","default","default","default",1,1,false);
 		}
-		public Kurier (int szerokosc, int wysokosc, int show){
-			this.szerokosc=szerokosc;
-			this.wysokosc=wysokosc;
-			this.show=show;
+		public Kurier (String surname,String name,String zipcode,String city,String street, int no, int flat, boolean status){
+			this.surname=surname;
+			this.name=name;
+			this.zipcode=zipcode;
+			this.city=city;
+			this.street=street;
+			this.no=no;
+			this.flat=flat;
+			this.status=status;
 		}
-
-		public void ustawCoWyswietlac(int nr){
+		
+		
+		public void set(int nr, String wartosc){
 			switch (nr){
-			case Rectangle.OBWOD:	this.show=nr;
-			case Rectangle.WYMIARY:	this.show=nr;
+			case Kurier.SURNAME:	surname=wartosc;
+			case Kurier.NAME:		name=wartosc;
+			case Kurier.ZIP_CODE:	zipcode=wartosc;
+			case Kurier.CITY:		city=wartosc;
+			case Kurier.STREET:		street=wartosc;
 			}
 		}
+		
+		public void set(int nr, int wartosc){
+			switch (nr){
+			case Kurier.NO:			no=wartosc;
+			case Kurier.FLAT:		flat=wartosc;
+			}
+		}
+		
+		public void send(){
+			if(status==false){
+				 System.out.println("WYSYŁANIE.... ZROBIONE!");
+				 System.out.println("");
+
+				 status=true;
+			}
+			else{
+				 System.out.println("ERR: juz wysłana!");
+				 System.out.println("");
+
+			}
+			}
+		
 		
 		public String toString (){
-			int pole, obwod;
-			pole=szerokosc*wysokosc;
-			obwod=(szerokosc+wysokosc)*2;
 			String wynik="";
-			if (show==Rectangle.WYMIARY){
-			wynik+=" Szerokosc: "+szerokosc+"\n";
-			wynik+=" Wysokosc: "+wysokosc+"\n";
-			}
-			if (show==Rectangle.POLE){
-			wynik+=" Pole:"+pole+"\n";
-			}
-			if (show==Rectangle.OBWOD){
-			wynik+=" Obwod:"+obwod+"\n";
-			}
-			wynik+="\n";
+			wynik+=name.charAt(0)+". "+surname+"\n";
+			wynik+="ul. "+street+" "+no+" m. "+flat+"\n";
+			wynik+=zipcode+" "+city+"\n";
+			if(status!=true)
+				wynik+="                        status: niewyslana"+"\n";
+			if(status==true)
+				wynik+="                        status: wyslana"+"\n";
 
+			wynik+="\n";
+			boolean status=true;
+			
 			return wynik;
 		}
 		}
