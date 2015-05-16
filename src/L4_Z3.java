@@ -75,9 +75,7 @@ public class L4_Z3 {
 			if(status==true)
 				wynik+="                        status: wyslana"+"\n";
 
-			wynik+="\n";
-			boolean status=true;
-			
+			wynik+="\n";			
 			return wynik;
 		}
 		}
